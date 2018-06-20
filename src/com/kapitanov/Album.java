@@ -2,10 +2,8 @@ package com.kapitanov;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Album {
-    private static Scanner scanner = new Scanner(System.in);
     private List<Song> tracks;
     private String name;
     private String band;
@@ -28,7 +26,7 @@ public class Album {
         return band;
     }
 
-    private boolean addTrack(String songName, String duration) {
+    public boolean addTrack(String songName, String duration) {
         Song song = new Song(songName, duration);
         if (!tracks.contains(song)) {
             tracks.add(song);
