@@ -2,10 +2,8 @@ package com.kapitanov;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 
 public class PlayList {
-    private static Scanner scanner = new Scanner(System.in);
     private List<Song> playList;
     private String name;
 
@@ -30,8 +28,12 @@ public class PlayList {
     }
 
     public void listAllSongs(List<Song> list) {
-        for (int i=0;i < list.size();i++) {
-            System.out.println("[" + (i+1) +"] " + list.get(i).getTitle());
+        if (list.size() == 0) {
+            System.out.println("No songs added yet");
+        } else {
+            for (int i = 0; i < list.size(); i++) {
+                System.out.println("[" + (i + 1) + "] " + list.get(i).getTitle());
+            }
         }
     }
 
